@@ -13,7 +13,12 @@ namespace CalDemo.Controllers
 {
     public class CalendarsController : Controller
     {
-        private CalDemoDbContext db = new CalDemoDbContext();
+        private CalDemoDbContext db;
+
+        public CalendarsController(CalDemoDbContext context)
+        {
+            db = context;
+        }
 
         // GET: Calendars
         public ActionResult Index()
@@ -95,12 +100,17 @@ namespace CalDemo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,SubscriberCount,Image")] Calendar calendar)
+        public ActionResult Edit([Bind(Include = "Id,Name,SubscriberCount")] Calendar calendar)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(calendar).State = EntityState.Modified;
+
+                var cal = db.Calendars.Find(calendar.Id);
+                    cal.Name = calendar.Name;
+                    cal.SubscriberCount = calendar.SubscriberCount; 
+                
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
             return View(calendar);

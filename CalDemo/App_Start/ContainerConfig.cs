@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using CalDemo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace CalDemo
             var builder = new ContainerBuilder();            
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+
+            builder.RegisterType<CalDemoDbContext>();
 
             var container = builder.Build();
 

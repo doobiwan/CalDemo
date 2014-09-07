@@ -22,6 +22,7 @@ namespace CalDemo
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.css",
                       "~/Content/simple-sidebar.css",
                       "~/Content/site.css"));
 

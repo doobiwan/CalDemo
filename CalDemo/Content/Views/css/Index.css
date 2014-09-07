@@ -1,0 +1,12 @@
+﻿.bordered-image {
+    outline: 4px solid black;
+}
+
+.subscriber-count {
+    color: gray;
+}
+
+.image-div {
+    height: 240px;
+}
+

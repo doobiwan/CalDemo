@@ -1,5 +1,6 @@
 ﻿@section Styles{
-<link href="~/Content/Views/css/Index.css" rel="stylesheet" />
+    <link href="~/Content/Views/css/Index.css" rel="stylesheet" />
+    <link href="~/Content/jquery.bxslider.css" rel="stylesheet" />
 }
 <div class="row">
     <div class="col-md-6">
@@ -12,14 +13,24 @@
 </div>
 <div id="calendar-content" class="row"></div>
 
+<div id="slider-content" class="row"></div>
+
 @section Scripts{
     <script src="~/Content/Views/js/Index.js"></script>
-
+    <script src="~/Scripts/jquery.bxslider.js"></script>
     <script id="calendar-template" type="text/x-handlebars-template">
         {{#each calendars}}
         <div class="col-md-3 image-div">
             <img class="bordered-image" src="/Calendars/Image/{{Id}}" />
             <h5 class="text-center subscriber-count">{{SubscriberCount}} Subscribers</h5>
+        </div>
+        {{/each}}
+    </script>
+
+    <script id="slider-template" type="text/x-handlebars-template">
+        {{#each calendars}}
+        <div class="slide">
+            <img src="/Calendars/Image/{{Id}}" />
         </div>
         {{/each}}
     </script>

@@ -208,6 +208,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\CalReply.png" />
+    <Content Include="Content\Images\ChrisleyUsa.png" />
+    <Content Include="Content\Images\CorpLogo.png" />
+    <Content Include="Content\Images\CovertAffairsUsa.png" />
+    <Content Include="Content\Images\DigUsa.png" />
+    <Content Include="Content\Images\GraceLandUsa.png" />
+    <Content Include="Content\Images\RushUsa.png" />
+    <Content Include="Content\Images\SuitsUsa.png" />
+    <Content Include="Content\simple-sidebar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
